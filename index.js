@@ -34,6 +34,17 @@ var app = new Vue({
 		}
 	},
 	methods: {
-
+        countdown:function(index){
+        	if(this.list[index].count === 1) {
+        		return;
+			}
+			this.list[index].count -- ;
+		},
+		countup:function(index){
+        	this.list[index].count ++ ;
+		},
+        remove:function(index){
+        	this.list.splice(index,1);
+		}
 	}
 })
